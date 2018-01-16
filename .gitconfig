@@ -1,0 +1,56 @@
+[user]
+	name = Jiří Pudil
+	email = me@jiripudil.cz
+	signingkey = AAE0703D
+
+[core]
+	excludesfile = /Users/jpudil/.gitignore
+	autocrlf = input
+	editor = vim
+
+[commit]
+	gpgsign = true
+	template = /Users/jpudil/.stCommitMsg
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+
+[merge]
+	ff = only
+
+[rebase]
+	autosquash = true
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[alias]
+	s = status -s
+	c = checkout
+	b = branch
+	l = log --oneline --decorate
+	ln = log --oneline --decorate --numstat
+	g = log --oneline --decorate --graph
+	d = diff --word-diff
+	last = diff --cached HEAD^
+
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+
+[gpg]
+	program = /usr/local/bin/gpg2
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain
+[sequence]
+	editor = rebase-editor

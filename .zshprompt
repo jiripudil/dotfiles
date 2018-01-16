@@ -1,0 +1,19 @@
+function git_prompt_info() {
+	local ref
+	ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(git rev-parse --short HEAD 2> /dev/null) || return 0
+	echo " %F{red}%B${ref#refs/heads/}%f%b$(parse_git_dirty)"
+}
+
+function parse_git_dirty() {
+	local STATUS=''
+	STATUS=$(git status --porcelain --untracked-files=no 2> /dev/null | tail -n1)
+
+	if [[ -n $STATUS ]]; then
+		echo '%F{yellow}%B*%f%b'
+	else
+		echo ''
+	fi
+}
+
+export PROMPT='%F{green}%n@%M%f %F{blue}%B%~%f%b$(git_prompt_info)$ '

@@ -1,0 +1,12 @@
+{
+    "require": {
+        "apigen/apigen": "^4.1",
+        "hirak/prestissimo": "^0.3.7",
+        "psy/psysh": "@stable",
+        "squizlabs/php_codesniffer": "^2.7",
+        "sllh/composer-versions-check": "^2.0",
+        "deployer/deployer": "^6.0",
+        "jakub-onderka/php-parallel-lint": "^0.9",
+        "phpstan/phpstan-shim": "^0.9"
+    }
+}
