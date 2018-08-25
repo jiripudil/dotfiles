@@ -1,7 +1,7 @@
 [user]
 	name = Jiří Pudil
 	email = me@jiripudil.cz
-	signingkey = AAE0703D
+	signingkey = FDD8C471
 
 [core]
 	excludesfile = /Users/jpudil/.gitignore
@@ -45,12 +45,12 @@
 	required = true
 
 [gpg]
-	program = /usr/local/bin/gpg2
+	program = /usr/local/bin/gpg
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [credential]
 	helper = osxkeychain
-[sequence]
-	editor = rebase-editor
+#[sequence]
+#	editor = rebase-editor

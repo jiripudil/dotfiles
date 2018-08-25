@@ -22,7 +22,7 @@ fpath=($HOME/.zsh/completions $fpath)
 # history substring
 antibody bundle zsh-users/zsh-history-substring-search
 
-PATH="$(brew --prefix homebrew/php/php71)/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$(yarn global bin):$PATH"
+PATH="$(brew --prefix php@7.2)/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$(yarn global bin):$PATH"
 export LSCOLORS=ExGxFxdxCxegedabagacad
 export GPG_TTY=$(tty)
 alias ls='ls -Gh'
