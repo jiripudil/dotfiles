@@ -1,7 +1,8 @@
 [user]
-	name = Jiří Pudil
+	name = Jiří Pudil
 	email = me@jiripudil.cz
-	signingkey = FDD8C471
+;	signingkey = FDD8C471
+	signingkey = AAE0703D
 
 [core]
 	excludesfile = /Users/jpudil/.gitignore
@@ -23,6 +24,7 @@
 
 [rebase]
 	autosquash = true
+	abbreviateCommands = true
 
 [color]
 	diff = auto
@@ -52,5 +54,7 @@
 	required = true
 [credential]
 	helper = osxkeychain
-#[sequence]
-#	editor = rebase-editor
+[sequence]
+	editor = rebase-editor
+[tag]
+	sort = version:refname
