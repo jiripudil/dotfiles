@@ -22,6 +22,11 @@ fpath=($HOME/.zsh/completions $fpath)
 # history substring
 antibody bundle zsh-users/zsh-history-substring-search
 
+# hstr
+export HISTFILE=~/.zsh_history
+export HH_CONFIG=hicolor
+bindkey -s "\C-r" "\eqhh\n"
+
 PATH="$(brew --prefix php@7.2)/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$(yarn global bin):$PATH"
 export LSCOLORS=ExGxFxdxCxegedabagacad
 export GPG_TTY=$(tty)
@@ -41,3 +46,6 @@ zstyle ':completion:*' group-name ''
 #fi;
 
 source $HOME/.zshprompt
+
+# added by travis gem
+[ -f /Users/jpudil/.travis/travis.sh ] && source /Users/jpudil/.travis/travis.sh
