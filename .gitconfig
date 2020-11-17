@@ -13,6 +13,9 @@
 	gpgsign = true
 	template = /Users/jpudil/.stCommitMsg
 
+[fetch]
+	prune = true
+
 [pull]
 	rebase = true
 
@@ -54,7 +57,7 @@
 	required = true
 [credential]
 	helper = osxkeychain
-[sequence]
-	editor = rebase-editor
+#[sequence]
+#	editor = rebase-editor
 [tag]
 	sort = version:refname
