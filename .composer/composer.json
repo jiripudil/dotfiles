@@ -1,6 +1,5 @@
 {
     "require": {
-        "hirak/prestissimo": "^0.3.7",
         "psy/psysh": "^0.9.6",
         "squizlabs/php_codesniffer": "^3.2",
         "sllh/composer-versions-check": "^2.0",
