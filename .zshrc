@@ -1,26 +1,26 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# load zgen
+source "${HOME}/.zgen/zgen.zsh"
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# if the init script doesn't exist
+if ! zgen saved; then
+  # specify plugins here
+  zgen prezto
+
+  zgen load romkatv/powerlevel10k powerlevel10k
+
+  zgen zsh-users/zsh-completions
+  zgen zsh-users/zsh-history-substring-search
+
+  # generate the init script from plugins above
+  zgen save
 fi
 
-# Customize to your needs...
-
-# Load antibody
-source <(antibody init)
-
-# completions
-antibody bundle zsh-users/zsh-completions
-fpath=($HOME/.zsh/completions $fpath)
-
-# history substring
-antibody bundle zsh-users/zsh-history-substring-search
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # hstr
 export HISTFILE=~/.zsh_history
@@ -45,7 +45,5 @@ zstyle ':completion:*' group-name ''
 #	compinit -C;
 #fi;
 
-source $HOME/.zshprompt
-
-# added by travis gem
-[ -f /Users/jpudil/.travis/travis.sh ] && source /Users/jpudil/.travis/travis.sh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
