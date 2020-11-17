@@ -27,7 +27,7 @@
 
 [rebase]
 	autosquash = true
-	abbreviateCommands = true
+;	abbreviateCommands = true
 
 [color]
 	diff = auto
