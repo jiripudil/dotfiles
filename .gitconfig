@@ -1,7 +1,6 @@
 [user]
 	name = Jiří Pudil
 	email = me@jiripudil.cz
-;	signingkey = FDD8C471
 	signingkey = AAE0703D
 
 [core]
