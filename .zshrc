@@ -25,9 +25,9 @@ antibody bundle zsh-users/zsh-history-substring-search
 # hstr
 export HISTFILE=~/.zsh_history
 export HH_CONFIG=hicolor
-bindkey -s "\C-r" "\eqhh\n"
+bindkey -s "\C-r" "\eqhstr\n"
 
-PATH="$(brew --prefix php@7.2)/bin:/usr/local/bin:$HOME/.composer/vendor/bin:$(yarn global bin):$PATH"
+PATH="/usr/local/bin:$HOME/.composer/vendor/bin:$(yarn global bin):$(brew --prefix ruby)/bin:$PATH"
 export LSCOLORS=ExGxFxdxCxegedabagacad
 export GPG_TTY=$(tty)
 alias ls='ls -Gh'
