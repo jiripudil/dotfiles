@@ -60,3 +60,4 @@
 #	editor = rebase-editor
 [tag]
 	sort = version:refname
+	gpgsign = true
