@@ -10,7 +10,6 @@
 
 [commit]
 	gpgsign = true
-	template = /Users/jpudil/.stCommitMsg
 
 [fetch]
 	prune = true
@@ -61,3 +60,5 @@
 [tag]
 	sort = version:refname
 	gpgsign = true
+[init]
+	defaultBranch = main
