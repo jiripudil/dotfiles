@@ -1,18 +1,23 @@
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
-
-# if the init script doesn't exist
-if ! zgen saved; then
+# load zgenom
+source "${HOME}/.zgenom/zgenom.zsh"
+zgenom autoupdate
+if ! zgenom saved; then
   # specify plugins here
-  zgen prezto
+  zgenom prezto
 
-  zgen load romkatv/powerlevel10k powerlevel10k
+  zgenom load romkatv/powerlevel10k powerlevel10k
 
-  zgen zsh-users/zsh-completions
-  zgen zsh-users/zsh-history-substring-search
+  zgenom load zsh-users/zsh-completions
+  zgenom load zsh-users/zsh-history-substring-search
+  zgenom load zsh-users/zsh-syntax-highlighting
+
+  if hash tmux &>/dev/null; then
+    zgenom prezto tmux
+  fi
 
   # generate the init script from plugins above
-  zgen save
+  zgenom save
+  zgenom compile ~/.zshrc
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
