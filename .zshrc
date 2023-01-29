@@ -27,12 +27,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# hstr
-alias hh=hstr
-setopt histignorespace
 export HISTFILE=~/.zsh_history
-export HSTR_CONFIG=hicolor
-bindkey -s "\C-r" "\C-a hstr -- \C-j"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export LSCOLORS=ExGxFxdxCxegedabagacad
 export GPG_TTY=$(tty)
