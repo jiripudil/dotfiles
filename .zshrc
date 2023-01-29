@@ -29,7 +29,6 @@ export HISTFILE=~/.zsh_history
 export HSTR_CONFIG=hicolor
 bindkey -s "\C-r" "\C-a hstr -- \C-j"
 
-PATH="/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$(yarn global bin):$(brew --prefix ruby)/bin:$HOME/.cargo/bin:$PATH"
 export LSCOLORS=ExGxFxdxCxegedabagacad
 export GPG_TTY=$(tty)
 alias ls='ls -Gh'
