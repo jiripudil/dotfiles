@@ -1,7 +1,7 @@
 [user]
 	name = Jiří Pudil
 	email = me@jiripudil.cz
-	signingkey = AAE0703D
+	signingkey = ~/.ssh/id_ed25519.pub
 
 [core]
 	excludesfile = /Users/jpudil/.gitignore
@@ -50,7 +50,8 @@
 	required = true
 
 [gpg]
-	program = /usr/local/bin/gpg
+	format = ssh
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

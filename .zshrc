@@ -31,7 +31,6 @@ export HISTFILE=~/.zsh_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export LSCOLORS=ExGxFxdxCxegedabagacad
-export GPG_TTY=$(tty)
 alias ls='ls -Gh'
 alias vi='vim'
 
