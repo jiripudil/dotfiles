@@ -1,13 +1,11 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
+Plug 'tpope/vim-obsession'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-obsession'
-
-syntax on
 set backspace=indent,eol,start
 set autoindent
 set laststatus=2
