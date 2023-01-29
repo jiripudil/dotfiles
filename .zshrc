@@ -7,9 +7,10 @@ if ! zgenom saved; then
 
   zgenom load romkatv/powerlevel10k powerlevel10k
 
-  zgenom load zsh-users/zsh-completions
-  zgenom load zsh-users/zsh-history-substring-search
   zgenom load zsh-users/zsh-syntax-highlighting
+  zgenom load zsh-users/zsh-completions
+  zgenom load zsh-users/zsh-autosuggestions
+  zgenom load zsh-users/zsh-history-substring-search
 
   if hash tmux &>/dev/null; then
     zgenom prezto tmux
@@ -29,6 +30,9 @@ fi
 
 export HISTFILE=~/.zsh_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 export LSCOLORS=ExGxFxdxCxegedabagacad
 alias ls='ls -Gh'
