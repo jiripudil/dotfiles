@@ -23,12 +23,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # hstr
+alias hh=hstr
+setopt histignorespace
 export HISTFILE=~/.zsh_history
-export HH_CONFIG=hicolor
-bindkey -s "\C-r" "\eqhstr\n"
-
-# fuck
-eval $(thefuck --alias)
+export HSTR_CONFIG=hicolor
+bindkey -s "\C-r" "\C-a hstr -- \C-j"
 
 PATH="/usr/local/bin:/usr/local/sbin:$HOME/.composer/vendor/bin:$(yarn global bin):$(brew --prefix ruby)/bin:$HOME/.cargo/bin:$PATH"
 export LSCOLORS=ExGxFxdxCxegedabagacad
@@ -50,3 +49,8 @@ zstyle ':completion:*' group-name ''
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

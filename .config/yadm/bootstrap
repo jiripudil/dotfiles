@@ -1,11 +1,14 @@
 #!/bin/bash
 
+# install dependencies
+# brew install hstr tmux vim
+
+# install zgenom
+# git clone https://github.com/jandamm/zgenom.git ~/.zgenom
+
 # install tmux plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install Vundle and vim plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-
-# install antibody
-curl -sL git.io/antibody | bash -s
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# vim +PluginInstall +qall
