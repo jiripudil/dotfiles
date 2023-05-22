@@ -7,6 +7,7 @@ brew install fzf tmux vim curl
 git clone https://github.com/jandamm/zgenom.git ~/.zgenom
 
 # install tmux plugin manager
+mkdir -p ~/.tmux/plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # install vim-plug
