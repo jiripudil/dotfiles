@@ -1,7 +1,9 @@
 {
   "dependencies": {
-    "create-next-app": "^13.1.2",
-    "create-vite": "^4.0.0",
+    "create-astro": "^3.1.6",
+    "create-next-app": "^13.4.3",
+    "create-remix": "^1.14.1",
+    "create-vite": "^4.4.1",
     "cx-cli": "^20.11.2",
     "docsify-cli": "^4.4.2",
     "eslint": "^7.17.0",
