@@ -27,6 +27,7 @@
 
 [rebase]
 	autosquash = true
+	updateRefs = true
 ;	abbreviateCommands = true
 
 [color]
